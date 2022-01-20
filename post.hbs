@@ -100,4 +100,38 @@
         </article>
     </main>
 
+{{#if @custom.show_subscribe_section}}
+{{#unless @member}}{{#if access}}
+    <section class="subscribe-section exc-canvas">
+        <main class="subscribe-section__content">
+            {{#if @custom.email_signup_title}}
+            <h2 class="hd-text-m">
+                {{@custom.email_signup_title}}
+            </h2>
+            {{/if}}
+            {{#if @custom.email_signup_title}}
+            <p>
+                {{@custom.email_signup_subtitle}}
+            </p>
+            {{/if}}
+        </main>
+    </section>
+{{/if}}{{/unless}}
+{{/if}}
+{{#if @custom.show_recent_posts}}
+  <section class="read-more-section related-posts exc-canvas">
+    <div class="related-posts__content">
+      <div class="exc-grid">
+          {{#get "posts" filter="id:-{{id}}" include="authors,tags" limit="3" as |more_posts|}}
+            {{#if more_posts}}
+                {{#foreach more_posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            {{/if}}
+          {{/get}}
+      </div>
+    </div>
+  </section>
+{{/if}}
+
     {{/post}}

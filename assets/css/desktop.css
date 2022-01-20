@@ -26,3 +26,19 @@
 .social-share-icons__container.horizontal {
     display: none;
 }
+
+.read-more-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.subscribe-section {
+    margin-top: 4.5rem;
+    padding-top: 9vmin;
+    padding-bottom: 9vmin;
+}
+
+.related-posts__content {
+    grid-column: wide;
+  }
+  

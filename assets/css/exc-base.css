@@ -1,14 +1,44 @@
+  /* -- Color Scheme Maping -- */
+
+html {
+  --exc-accent-color: var(--exc-accent-light-color);
+  --background-color: var(--light-bg);
+  --body-text-color: var(--text-light-color);
+  --text-blockquote-color: var(--text-blockquote-light-color);
+  --pre-bg-color: var(--bg-color-800);
+
+  --emphasis-top-color: var(--emphasis-top-light-color);
+  --emphasis-high-color: var(--emphasis-high-light-color);
+  --emphasis-medium-color: var(--emphasis-medium-light-color);;
+  --emphasis-low-color: var(--emphasis-low-light-color);
+  --emphasis-disabled-color: var(--emphasis-disabled-light-color);
+
+}
+html.dark-mode {
+  --exc-accent-color: var(--exc-accent-dark-color);
+  --background-color: var(--space-blue);
+  --body-text-color: var(--text-dark-color);
+  --text-blockquote-color: var(--text-blockquote-dark-color);
+  --pre-bg-color: var(--bg-color-400);
+
+  --emphasis-top-color: var(--emphasis-top-dark-color);
+  --emphasis-high-color: var(--emphasis-high-dark-color);
+  --emphasis-medium-color: var(--emphasis-medium-dark-color);;
+  --emphasis-low-color: var(--emphasis-low-dark-color);
+  --emphasis-disabled-color: var(--emphasis-disabled-dark-color);
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 html {
   font-size: 62.5%;
-  background-color: var(--light-bg);
+  background-color: var(--background-color);
 }
 
 body {
-  color: var(--text-light-color);
+  color: var(--body-text-color);
   line-height: var(--paragraph-line-height);
   font-size: var(--paragraph-font-size);
   font-family: var(--paragraph-font-family);
@@ -88,11 +118,12 @@ dd {
 }
 
 blockquote {
-  color: var(--text-blockquote-light-color);
+  color: var(--text-blockquote-color);
   margin: 1.5em 0;
   padding: 0 1.6em 0 1.6em;
   border-left: 3px solid var(--exc-accent-color);
 }
+
 
 blockquote p {
   margin: 0.8em 0;
@@ -200,7 +231,7 @@ h6 {
 }
 
 pre {
-  background-color: var(--bg-color-800);
+  background-color: var(--pre-bg-color);
   color: white;
   padding: 16px;
   overflow: auto;

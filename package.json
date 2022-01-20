@@ -1,6 +1,6 @@
 {
     "name": "wanda",
-    "description": "The blog theme using Excelsior Design System 1.0.0 from Accentio Studios",
+    "description": "The Main Template for Accentio Blog using the Excelsior Design System 1.0.0 from Accentio Studios",
     "demo": "https://blog.accentiostudios.com",
     "version": "1.0.0",
     "engines": {
@@ -45,12 +45,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/AccentiosStudios/Wanda.git"
+        "url": "https://github.com/AccentioStudios/wanda.git"
     },
-    "bugs": "https://github.com/AccentioStudios/Wanda/issues",
-    "contributors": "https://github.com/AccentioStudios/Wanda/graphs/contributors",
+    "bugs": "https://github.com/AccentioStudios/wanda/issues",
     "devDependencies": {
-        "@tryghost/release-utils": "0.6.12",
         "autoprefixer": "10.2.5",
         "beeper": "2.1.0",
         "cssnano": "4.1.10",
@@ -94,42 +92,6 @@
         },
         "card_assets": true,
         "custom": {
-            "title_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
-            "body_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Elegant serif"
-            },
-            "publication_cover_style": {
-                "type": "select",
-                "options": [
-                    "None",
-                    "Medium",
-                    "Large"
-                ],
-                "default": "Medium",
-                "group": "homepage"
-            },
-            "feed_layout": {
-                "type": "select",
-                "options": [
-                    "Dynamic grid",
-                    "Simple grid",
-                    "List"
-                ],
-                "default": "Dynamic grid",
-                "group": "homepage"
-            },
             "color_scheme": {
                 "type": "select",
                 "options": [
@@ -139,41 +101,19 @@
                 ],
                 "default": "Light"
             },
-            "header_button_background": {
-                "type": "color",
-                "default": "#ffffff"
-            },
-            "header_button_text_color": {
-                "type": "select",
-                "options": [
-                    "Light",
-                    "Dark"
-                ],
-                "default": "Dark"
-            },
-            "post_image_width": {
-                "type": "select",
-                "options": [
-                    "Wide",
-                    "Full",
-                    "Small"
-                ],
-                "default": "Wide",
-                "group": "post"
-            },
-            "email_signup_for_logged_out_visitors": {
-                "type": "select",
-                "options": [
-                    "Footer",
-                    "Bottom of post",
-                    "None"
-                ],
-                "default": "Footer",
-                "group": "post"
-            },
-            "email_signup_text": {
+            "email_signup_title": {
                 "type": "text",
                 "default": "Sign up for more like this.",
+                "group": "post"
+            },
+            "email_signup_subtitle": {
+                "type": "text",
+                "default": "Weekly roundup of emerging trends, products and ideas in the creator economy, trusted by 13,000+ readers.",
+                "group": "post"
+            },
+            "show_subscribe_section": {
+                "type": "boolean",
+                "default": true,
                 "group": "post"
             },
             "show_recent_posts": {
@@ -182,10 +122,5 @@
                 "group": "post"
             }
         }
-    },
-    "renovate": {
-        "extends": [
-            "@tryghost:theme"
-        ]
     }
 }

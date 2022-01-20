@@ -5,7 +5,8 @@
 .exc-grid {
     width: 100%;
     display: grid;
-    grid-gap: 1rem;
+    row-gap: 2rem;
+    column-gap: 1rem;
     grid-template-columns: repeat(1, 1fr);
 }
 .exc-grid > * {

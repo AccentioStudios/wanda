@@ -1,3 +1,7 @@
+  /* -- Color Scheme Maping -- */
+  html {
+  }
+
 /* ==========================================================================
    Cards
    ========================================================================== */
@@ -14,10 +18,67 @@
   border-radius: var(--border-radius-default);
   overflow: hidden;
 }
+.exc-card[class^=mat-dp] {
+  background-color: var(--mat-metal-light-color-alldp);
+}
+.exc-card.mat-1dp {
+  box-shadow: var(--mat-elevation-box-shadow-1dp);
+}
+.exc-card.mat-2dp {
+  box-shadow: var(--mat-elevation-box-shadow-2dp);
+}
+.exc-card.mat-3dp {
+  box-shadow: var(--mat-elevation-box-shadow-3dp);
+}
+.exc-card.mat-4dp {
+  box-shadow: var(--mat-elevation-box-shadow-4dp);
+}
+.exc-card.mat-6dp {
+  box-shadow: var(--mat-elevation-box-shadow-6dp);
+}
+.exc-card.mat-8dp {
+  box-shadow: var(--mat-elevation-box-shadow-8dp);
+}
+.exc-card.mat-12dp {
+  box-shadow: var(--mat-elevation-box-shadow-12dp);
+}
+.exc-card.mat-16dp {
+  box-shadow: var(--mat-elevation-box-shadow-16dp);
+}
+.exc-card.mat-24dp {
+  box-shadow: var(--mat-elevation-box-shadow-24dp);
+}
 
-.exc-card .dark {
+.exc-card.dark {
   background-color: var(--mat-metal-dark-color-0dp);
   color: var(--text-dark-color);
+}
+.exc-card.dark.mat-1dp {
+  background-color: var(--mat-metal-dark-color-1dp);
+}
+.exc-card.dark.mat-2dp {
+  background-color: var(--mat-metal-dark-color-2dp);
+}
+.exc-card.dark.mat-3dp {
+  background-color: var(--mat-metal-dark-color-3dp);
+}
+.exc-card.dark.mat-4dp {
+  background-color: var(--mat-metal-dark-color-4dp);
+}
+.exc-card.dark.mat-6dp {
+  background-color: var(--mat-metal-dark-color-6dp);
+}
+.exc-card.dark.mat-8dp {
+  background-color: var(--mat-metal-dark-color-8dp);
+}
+.exc-card.dark.mat-12dp {
+  background-color: var(--mat-metal-dark-color-12dp);
+}
+.exc-card.dark.mat-16dp {
+  background-color: var(--mat-metal-dark-color-16dp);
+}
+.exc-card.dark.mat-24dp {
+  background-color: var(--mat-metal-dark-color-24dp);
 }
 
 .exc-card header {
@@ -54,17 +115,19 @@ h6 {
 }
 
 .exc-card header > h2 {
-  line-height: calc(var(--heading-s-line-height) + 0.06rem);
-  font-size: calc(var(--heading-s-font-size) - 0.5rem);
-  letter-spacing: var(--heading-s-letter-spacing);
-  font-weight: 600;
+  line-height: calc(var(--heading-s-line-height) + .06rem);
+  font-size: calc(var(--heading-s-font-size) - .5rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin-bottom: 1rem;
 }
 
 .exc-card header > h3 {
-  line-height: calc(var(--heading-xs-line-height) - 0.5rem);
+  line-height: calc(var(--heading-xs-line-height) + .5rem);
   font-size: calc(var(--heading-xs-font-size) - 0.2rem);
-  letter-spacing: var(--heading-xs-letter-spacing);
   font-weight: 600;
+  letter-spacing: -.018em;
+  margin-bottom: 1rem;
 }
 
 .exc-card header > h4 {

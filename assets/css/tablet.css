@@ -91,3 +91,20 @@
     padding-top: 3rem;
     box-sizing: border-box;
 }
+
+.subscribe-section {
+    padding-top: 3vmin;
+    padding-bottom: 7vmin;
+}
+
+.subscribe-section__content > h2 {
+    line-height: var(--heading-m-line-height);
+    font-size: var(--heading-m-font-size);
+    letter-spacing: var(--heading-m-letter-spacing);
+}
+
+.read-more-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: var(--read-more-background-color);
+}

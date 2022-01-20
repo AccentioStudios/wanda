@@ -2,7 +2,7 @@
 which templates loop over to generate a list of posts. --}}
 
 <article>
-<a href="{{url}}" class="exc-card related-card {{post_class}}">
+<a href="{{url}}" class="exc-card related-card {{post_class}} {{#match @custom.color_scheme "Dark"}}dark {{#is "index"}}mat-6dp{{/is}}{{#is "post"}}mat-8dp{{/is}}{{/match}}">
           <header>
             <div class="exc-card__media-wrapper">
               {{#if feature_image}}

@@ -74,10 +74,12 @@
     --text-light-color: #1f203d;
     --text-dark-color: #fff;
     --text-blockquote-light-color: #7d7d7d;
+    --text-blockquote-dark-color: #e9e9e9;
     --dark-grey-color: #151515;
 
   /* -- Default Accent Color -- */
-  --exc-accent-color: var(--primary-color-700);
+  --exc-accent-light-color: var(--primary-color-700);
+  --exc-accent-dark-color: var(--accentio-blue-variant);
 
   /* -- Materials Colors -- */
 
