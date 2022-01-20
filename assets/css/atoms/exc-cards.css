@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+/* The card is by default a metal material in light mode with 0dp and no border line */
+.exc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--mat-metal-light-color-alldp);
+  color: var(--text-light-color);
+  width: 100%;
+  border-radius: var(--border-radius-default);
+  overflow: hidden;
+}
+
+.exc-card .dark {
+  background-color: var(--mat-metal-dark-color-0dp);
+  color: var(--text-dark-color);
+}
+
+.exc-card header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: inherit;
+  padding: 0 1.4vmax;
+}
+
+.exc-card main {
+  padding: 0 1.4vmax;
+  height: 100%;
+  font-size: 1.6rem;
+  line-height: 1.8em;
+}
+
+.exc-card footer {
+  width: 100%;
+  padding: 0 1.4vmax;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  justify-self: end;
+}
+
+.exc-card header > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  margin-bottom: 0.3em;
+}
+
+.exc-card header > h2 {
+  line-height: calc(var(--heading-s-line-height) + 0.06rem);
+  font-size: calc(var(--heading-s-font-size) - 0.5rem);
+  letter-spacing: var(--heading-s-letter-spacing);
+  font-weight: 600;
+}
+
+.exc-card header > h3 {
+  line-height: calc(var(--heading-xs-line-height) - 0.5rem);
+  font-size: calc(var(--heading-xs-font-size) - 0.2rem);
+  letter-spacing: var(--heading-xs-letter-spacing);
+  font-weight: 600;
+}
+
+.exc-card header > h4 {
+  line-height: calc(var(--heading-xxs-line-height) - 0.5rem);
+  font-size: calc(var(--heading-xxs-font-size) - 0.1rem);
+  letter-spacing: var(--heading-xxs-letter-spacing);
+  font-weight: 600;
+}
+
+.exc-card header > h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child),
+h6:not(:first-child) {
+  margin-top: 0;
+}
+
+.exc-card__media-wrapper {
+  position: relative;
+  width: calc(100% + 2.8vmax);
+  min-height: 200px;
+  max-height: 380px;
+  margin: 0 -1.4vmax;
+  margin-bottom: 1rem;
+}
+.exc-card__media-wrapper img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  object-position: center;
+}

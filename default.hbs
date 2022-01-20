@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{/match}}>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True" />
+    <title>{{meta_title}}</title>
+
+        {{!-- fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
+    this will take care of caching and cache-busting automatically --}}
+    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" /> --}}
+
+    {{!-- animate css --}}
+    <link rel="stylesheet" href="{{asset "built/animate.min.css"}}"/>
+    {{!-- style mobile --}}
+    <link rel="stylesheet" href="{{asset "built/newmain.css"}}" type="text/css">
+    {{!-- style tablet --}}
+    <link rel="stylesheet" href="{{asset "built/tablet.css"}}" type="text/css" media="screen and (min-width: 768px)">
+    {{!-- style desktop --}}
+    <link rel="stylesheet" href="{{asset "built/desktop.css"}}" type="text/css" media="screen and (min-width: 1200px)">  
+    {{!-- fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
+    it should always be the last tag before the closing head tag --}}
+    {{ghost_head}}
+</head>
+<body class="wrapper {{body_class}}">
+    <header id="header" class="header 
+    {{#is "post"}}{{#if post.feature_image}}header-transparent{{/if}}{{/is}}
+    {{#is "index"}}header-transparent{{/is}}">
+        <div class="header__content">
+        <a href="/">  
+        <picture class="header__brand brand-darkblue animate__animated animate__fadeIn">
+             <source srcset="{{asset "img/logos/brand-logo-image-md-darkblue.svg"}}" media="(min-width: 1200px)">
+            <img src="{{asset "img/logos/brand-logo-image-sm-darkblue.svg"}}" alt="Accentio Blog Logo">
+        </picture>
+
+        <picture class="header__brand brand-white animate__animated animate__fadeIn ">
+             <source srcset="{{asset "img/logos/brand-logo-image-md.svg"}}"media="(min-width: 1200px)">
+            <img src="{{asset "img/logos/brand-logo-image-sm.svg"}}" alt="Accentio Blog Logo">
+        </picture>
+        </a>
+        <div class="header__cta animate__animated animate__fadeIn">
+            <a id="cta-header-desktop" href="https://accentiostudios.com" 
+            class="exc-hero-button-xl">
+                Inicia con nosotros
+            </a>
+        </div>
+        </div>
+        <div class="read-progress-container">
+    <progress value="50" id="blog-progress-bar" class="blog-progress-bar" max="100"></progress>
+</div>
+    </header>
+        {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+</body>
+<footer></footer>
+</html>

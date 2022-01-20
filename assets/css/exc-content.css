@@ -1,0 +1,118 @@
+/* ==========================================================================
+  Content Container
+========================================================================== */
+/* Default vertical spacing */
+
+.exc-content > * + * {
+  margin-top: 4vmin;
+  margin-bottom: 0;
+}
+
+/* [id] represents all headings h1-h6, reset all margins */
+.exc-content > [id] {
+  margin: 0;
+}
+
+.exc-content > h2 {
+  font-size: 2.4rem;
+  line-height: 1.3em;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+}
+
+.exc-content > h3 {
+  font-size: 2rem;
+  line-height: 1.3em;
+  letter-spacing: -0.03rem;
+}
+
+/* Add back a top margin to all headings, unless a heading
+  is the very first element in the post content */
+.exc-content > [id]:not(:first-child) {
+  margin: 3.2rem 0 0;
+}
+
+/* Add a small margin between a heading and anything after it */
+.exc-content > [id] + * {
+  margin-top: 1.5rem;
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.exc-content > hr,
+.exc-content > blockquote {
+  position: relative;
+  margin-top: 6vmin;
+}
+.exc-content > hr + *,
+.exc-content > blockquote + * {
+  margin-top: 6vmin !important;
+}
+
+/* Now the content typography styles */
+.exc-content a {
+  color: var(--exc-accent-color);
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+/* ==========================================================================
+    Content grid
+  ========================================================================== */
+
+.exc-canvas {
+  display: grid;
+  position: relative;
+  grid-template-columns:
+    [full-start]
+    minmax(4vmin, auto)
+        [wide-start]
+            minmax(auto, 170px)
+                [main-start]
+                    min(760px, calc(100% - 8vw))
+                [main-end]
+            minmax(auto, 170px)
+        [wide-end]
+    minmax(4vmin, auto)
+    [full-end];
+}
+
+.exc-canvas > * {
+  grid-column: main;
+}
+
+@media (min-width: 768px) {
+  .exc-content > [id]:not(:first-child) {
+    margin: 4.8rem 0 0;
+  }
+
+  .exc-content > h2 {
+    font-size: 2.8rem;
+    line-height: 1.3em;
+    font-weight: 700;
+    letter-spacing: -0.03rem;
+  }
+
+  .exc-content > h3 {
+    font-size: 2.4rem;
+    line-height: 1.3em;
+    letter-spacing: -0.03rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .exc-canvas.exc-canvas-article {
+    grid-template-columns: 
+    [full-start]
+      minmax(4vmin, auto)
+        [wide-start]
+          0px
+            [main-start] 
+              min(760px, calc(100% - 8vw)) 
+            [main-end]
+          340px
+        [wide-end]
+      minmax(4vmin, auto)
+    [full-end];
+    ;
+  }
+}

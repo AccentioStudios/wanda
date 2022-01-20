@@ -1,0 +1,21 @@
+{{!< default}}
+<main class="main">
+  {{! <section class="hero-section hero-section-with-bg hero-section-home-carr">
+        <div class="spinner-ripple-container">
+            <div class="spinner-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section> }}
+
+  <section class="related-posts exc-canvas">
+    <div class="related-posts__content">
+      <div class="exc-grid">
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+      </div>
+    </div>
+  </section>
+</main>

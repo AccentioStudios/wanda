@@ -1,0 +1,28 @@
+
+
+
+.hero-section__content.articlepage {
+    grid-column: wide-start/wide-end;
+}
+
+.header__brand {
+    max-width: 230px;
+}
+
+.header-fixed .header__content .header__brand {
+    max-width: 190px;
+}
+
+.hero-section-with-bg {
+    min-height: 70vh;
+}
+.hero-section-home-carr {
+    min-height: 100vh;
+}
+
+.social-share-icons__track {
+    display: block;
+}
+.social-share-icons__container.horizontal {
+    display: none;
+}

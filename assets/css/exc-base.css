@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  font-size: 62.5%;
+  background-color: var(--light-bg);
+}
+
+body {
+  color: var(--text-light-color);
+  line-height: var(--paragraph-line-height);
+  font-size: var(--paragraph-font-size);
+  font-family: var(--paragraph-font-family);
+  font-weight: var(--paragraph-font-weight);
+  font-style: var(--paragraph-font-style);
+  letter-spacing: var(--paragraph-letter-spacing);
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+textarea {
+  resize: vertical;
+}
+ol,
+ul {
+  padding-left: 1.3em;
+  padding-right: 1.5em;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  margin: 0.5em 0 1em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul,
+ol {
+  max-width: 100%;
+}
+
+li {
+  padding-left: 0.3em;
+  line-height: 1.6em;
+}
+
+li + li {
+  margin-top: 0.5em;
+}
+
+dt {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 120px;
+  color: #daf2fd;
+  font-weight: 500;
+  text-align: right;
+}
+
+dd {
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+blockquote {
+  color: var(--text-blockquote-light-color);
+  margin: 1.5em 0;
+  padding: 0 1.6em 0 1.6em;
+  border-left: 3px solid var(--exc-accent-color);
+}
+
+blockquote p {
+  margin: 0.8em 0;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+/* Quotation marks */
+blockquote small:before {
+  content: "\2014 \00A0";
+}
+
+blockquote cite {
+  font-weight: bold;
+}
+blockquote cite a {
+  font-weight: normal;
+}
+a {
+  color: var(--exc-accent-color);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  margin-bottom: 3rem;
+}
+
+h1 {
+  line-height: var(--heading-xxl-line-height);
+  font-size: var(--heading-xxl-font-size);
+  font-weight: var(--heading-xxl-font-weight);
+  letter-spacing: var(--heading-xxl-letter-spacing);
+  margin-bottom: var(--heading-xxl-margin-bottom);
+}
+
+h2 {
+  line-height: var(--heading-xl-line-height);
+  font-size: var(--heading-xl-font-size);
+  font-weight: var(--heading-xl-font-weight);
+  letter-spacing: var(--heading-xl-letter-spacing);
+  margin-bottom: var(--heading-xl-margin-bottom);
+}
+
+h3 {
+  line-height: var(--heading-l-line-height);
+  font-size: var(--heading-l-font-size);
+  font-weight: var(--heading-l-font-weight);
+  letter-spacing: var(--heading-l-letter-spacing);
+  margin-bottom: var(--heading-l-margin-bottom);
+}
+
+h4 {
+  line-height: var(--heading-m-line-height);
+  font-size: var(--heading-m-font-size);
+  font-weight: var(--heading-m-font-weight);
+  letter-spacing: var(--heading-m-letter-spacing);
+  margin-bottom: var(--heading-m-margin-bottom);
+}
+
+h5 {
+  line-height: var(--heading-s-line-height);
+  font-size: var(--heading-s-font-size);
+  font-weight: var(--heading-s-font-weight);
+  letter-spacing: var(--heading-s-letter-spacing);
+  margin-bottom: var(--heading-s-margin-bottom);
+}
+
+h6 {
+  line-height: var(--heading-xs-line-height);
+  font-size: var(--heading-xs-font-size);
+  font-weight: var(--heading-xs-font-weight);
+  letter-spacing: var(--heading-xs-letter-spacing);
+  margin-bottom: var(--heading-xs-margin-bottom);
+}
+
+.margin-top-1 {
+  margin-top: var(--spacing-unit);
+}
+.margin-top-2 {
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+pre {
+  background-color: var(--bg-color-800);
+  color: white;
+  padding: 16px;
+  overflow: auto;
+  border-radius: 6px;
+  line-height: 1.2em;
+  font-size: 2.1rem;
+  margin: 2rem 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0px;
+}
+
+code {
+  padding: 3px 6px;
+  margin: 0;
+  font-size: 1.7rem;
+  background-color: #d9d9d9;
+  border-radius: 6px;
+}
+
+.article {
+  word-break: break-word;
+}

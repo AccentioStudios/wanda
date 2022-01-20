@@ -1,0 +1,103 @@
+{{!< default}} {{!-- fontawesome --}} <script src="https://kit.fontawesome.com/806d5b2602.js" crossorigin="anonymous">
+    </script>
+    <script type="module" src="{{asset "js/post-page.js"}}" defer></script>
+    {{#post}}
+
+    <main class="main">
+        <article class="article {{post_class}} {{#match @custom.post_image_width "Full"}}image-full{{else match @custom.post_image_width "=" "Small"}}image-small{{/match}}">
+            <div class="hero-section exc-canvas{{#if feature_image}} hero-section-with-bg {{/if}}">
+                <div class="hero-section__content articlepage">
+                    <div class="hero-section__header">
+                        {{!-- <h3 class="hero-section__category animate__animated animate__fadeInDown">{{ category }} </h3> --}}
+                        <div class="article-meta {{#if feature_image}} emphasis-dark-high {{else}} emphasis-light-medium {{/if}} animate__animated animate__fadeInUp">
+                            <span class="author-byline">
+                                Por <a href="{{primary_author.url}}" class="{{#if feature_image}} emphasis-dark-top {{else}} emphasis-light-top {{/if}}">
+                                {{primary_author.name}}
+                                </a>
+                            </span>
+                            {{#if primary_tag}}
+                            <span class="article-tag">
+                                en <a href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                            </span>
+                            {{/if}}
+                            —
+                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                            <span class="reading-time-byline">
+                                <span class="bull">&bull;</span>
+                                {{reading_time}}
+                            </span>
+                        </div>
+                        <h1 class="hero-section__title{{#if feature_image}} emphasis-dark-top {{else}} emphasis-light-top {{/if}}animate__animated animate__fadeInDown">
+                            {{ title }}
+                        </h1>
+                    </div>
+                </div>
+                {{#if feature_image}}
+                <div class="hero-section__background">
+                    <div class="hero-section__background-frontlight animate__animated animate__fadeIn"></div>
+                    <figure class="article-figure">
+                    <img loading="lazy" 
+                    class="responsive-picture  animate__animated animate__fadeIn"
+                    srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 720w,
+                                {{img_url feature_image size="l"}} 960w,
+                                {{img_url feature_image size="xl"}} 1200w,
+                                {{img_url feature_image size="xxl"}} 2000w"
+                        sizes="(max-width: 1200px) 100vw, 1200px"
+                        src="{{img_url feature_image size="xl"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    >
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+                    {{!-- <picture>
+                        <img loading="lazy" class="responsive-picture  animate__animated animate__fadeIn"
+                            srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w,
+                            {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+                            sizes="(min-width: 1400px) 1400px, 92vw" src="{{img_url feature_image size=" xl"}}"
+                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                    </picture> --}}
+                </div>
+                {{/if}}
+            </div>
+            <div class="main-section">
+                {{!-- share menu for mobile --}}
+                <nav class="social-share-icons__container horizontal">
+                    <ul class="social-share-icons__body">
+                        <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{url}}" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.facebook.com/sharer.php?u={{url}}" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/intent/tweet?url={{url}}&text={{title}}&via=AccentioStudios"
+                                target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </nav>
+       
+                    <section class="gh-content exc-content exc-canvas exc-canvas-article">
+                        {{content}}
+                    <div class="social-share-icons__track">
+                        <nav class="social-share-icons__container">
+                            <ul class="social-share-icons__body">
+                                <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.accentiostudios.com/{{url}}"
+                                        target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.facebook.com/sharer.php?u=https://blog.accentiostudios.com/{{url}}"
+                                        target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/intent/tweet?url=https://blog.accentiostudios.com/{{url}}&text={{title}}&via=AccentioStudios"
+                                        target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    </section>
+                    <aside class="main-section__aside">
+
+                    </aside>
+                
+            </div>
+        </article>
+    </main>
+
+    {{/post}}

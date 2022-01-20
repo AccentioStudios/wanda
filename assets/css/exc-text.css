@@ -1,0 +1,89 @@
+.hd-text-xxl {
+  line-height: var(--heading-xxl-line-height);
+  font-size: var(--heading-xxl-font-size);
+  letter-spacing: var(--heading-xxl-letter-spacing);
+  margin-bottom: var(--heading-xxl-margin-bottom);
+}
+
+.hd-text-xl {
+  line-height: var(--heading-xl-line-height);
+  font-size: var(--heading-xl-font-size);
+  letter-spacing: var(--heading-xl-letter-spacing);
+  margin-bottom: var(--heading-xl-margin-bottom);
+}
+
+.hd-text-l {
+  line-height: var(--heading-l-line-height);
+  font-size: var(--heading-l-font-size);
+  letter-spacing: var(--heading-l-letter-spacing);
+  margin-bottom: var(--heading-l-margin-bottom);
+}
+
+.hd-text-m {
+  line-height: var(--heading-m-line-height);
+  font-size: var(--heading-m-font-size);
+  letter-spacing: var(--heading-m-letter-spacing);
+  margin-bottom: var(--heading-m-margin-bottom);
+}
+.hd-text-s {
+  line-height: var(--heading-s-line-height);
+  font-size: var(--heading-s-font-size);
+  letter-spacing: var(--heading-s-letter-spacing);
+  margin-bottom: var(--heading-s-margin-bottom);
+}
+
+.hd-text-xs {
+  line-height: var(--heading-xs-line-height);
+  font-size: var(--heading-xs-font-size);
+  letter-spacing: var(--heading-xs-letter-spacing);
+  margin-bottom: var(--heading-xs-margin-bottom);
+}
+
+.hd-text-xxs {
+  line-height: var(--heading-xxs-line-height);
+  font-size: var(--heading-xxs-font-size);
+  letter-spacing: var(--heading-xxs-letter-spacing);
+  margin-bottom: var(--heading-xxs-margin-bottom);
+}
+
+.text-weight-m {
+  font-weight: 500;
+}
+.text-weight-l {
+  font-weight: 600;
+}
+.text-weight-xl {
+  font-weight: 800;
+}
+
+.emphasis-dark-disabled {
+  color: var(--emphasis-disabled-dark-color);
+}
+.emphasis-dark-low {
+  color: var(--emphasis-low-dark-color);
+}
+.emphasis-dark-medium {
+  color: var(--emphasis-medium-dark-color);
+}
+.emphasis-dark-high {
+  color: var(--emphasis-high-dark-color);
+}
+.emphasis-dark-top {
+  color: var(--emphasis-top-dark-color);
+}
+
+.emphasis-light-disabled {
+  color: var(--emphasis-disabled-light-color);
+}
+.emphasis-light-low {
+  color: var(--emphasis-low-light-color);
+}
+.emphasis-light-medium {
+  color: var(--emphasis-medium-light-color);
+}
+.emphasis-light-high {
+  color: var(--emphasis-high-light-color);
+}
+.emphasis-light-top {
+  color: var(--emphasis-top-light-color);
+}

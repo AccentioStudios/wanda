@@ -1,0 +1,35 @@
+{{!-- This is a partial file used to generate a post "card"
+which templates loop over to generate a list of posts. --}}
+
+<article>
+<a href="{{url}}" class="exc-card related-card {{post_class}}">
+          <header>
+            <div class="exc-card__media-wrapper">
+              {{#if feature_image}}
+                              <img srcset="{{img_url feature_image size=" s"}} 300w, 
+                             {{img_url feature_image size="m" }} 600w,
+                             {{img_url feature_image size="l" }} 1000w, 
+                             {{img_url feature_image size="xl" }} 2000w"
+                    sizes="(max-width: 1000px) 400px, 800px" 
+                    src="{{img_url feature_image size=" m"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" 
+                    loading="lazy" />
+            {{/if}}
+            </div>
+            {{#if primary_tag}}
+             <h4 class="">
+                {{#primary_tag}}
+                    {{name}}
+                {{/primary_tag}}
+            </h4>
+             {{/if}}
+            <h2 class="">{{title}}</h2>
+          </header>
+          <main>
+            {{excerpt}}
+          </main>
+          <footer>
+            <span>{{reading_time}}</span>
+          </footer>
+</a>
+</article>
