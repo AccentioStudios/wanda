@@ -22,7 +22,7 @@ html {
   --read-more-background-color: var(--space-blue);
   --subscribe-section-background-color: var(--mat-metal-light-color-alldp);
 
-  --footer-background-color: var(--mat-metal-light-color-alldp);
+  --footer-background-color: var(--mat-metal-dark-color-1dp);
 }
 html.dark-mode {
     --social-share-a-hover-color: black;
@@ -189,6 +189,7 @@ html.dark-mode {
   position: relative;
   padding-top: 2rem;
   box-sizing: border-box;
+  padding-bottom: 57px;
 }
 
 .article-figure {
@@ -554,7 +555,6 @@ ul.breadcrumb__content li a:hover {
 }
 
 .subscribe-section {
-    margin-top: 4.5rem;
     padding-top: 2vmin;
     padding-bottom: 3vmin;
     background: var(--subscribe-section-background-color);
@@ -780,12 +780,46 @@ progress[value]::-moz-progress-bar {
 
 
 .footer {
+  color: var(--emphasis-high-dark-color);
   background-color: var(--footer-background-color);
+  font-family: var(--font-family-heading);
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+.footer a {
+  color: var(--emphasis-high-dark-color);
 }
 
 .footer__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  grid-column: wide;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "logo links"
+}
+.footer__logo-and-social {
+  display: inline-flex;
+  grid-area: logo;
+}
+
+.footer__other-links {
+  text-align: right;
+  font-weight: 600;
+}
+.footer__outer {
+  grid-column: wide;
+  margin-top: 90px;
+}
+
+.exc-canvas-article {
+  margin-bottom: 3rem;
+}
+
+.tags-post-list {
+  grid-column: wide;
+}
+
+.tags-hero-section {
+  margin-bottom: 5rem;
 }

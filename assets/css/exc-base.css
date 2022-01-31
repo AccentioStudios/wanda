@@ -257,3 +257,8 @@ code {
 .article {
   word-break: break-word;
 }
+
+.brand-arrow {
+  text-align: left;
+  display: block;
+}
