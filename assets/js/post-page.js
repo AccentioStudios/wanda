@@ -2,17 +2,17 @@ const header = document.querySelector('#header');
 const heroSection = document.querySelector(".hero-section");
 const progressBarContainer = document.querySelector(".read-progress-container");
 const progressBar = document.querySelector('#blog-progress-bar');
-const content = document.querySelector('section.main-section__article');
+const content = document.querySelector('section.gh-content');
 
 let headerFixed = false;
 
 function scrollHandler() {
 
+    const heroActualSize = heroSection.clientHeight;
     let scroll = document.documentElement.scrollTop;
-    let height = content.scrollHeight - document.documentElement.clientHeight;
+    let height = content.scrollHeight - document.documentElement.clientHeight + heroActualSize;
     let percentage = (scroll / height) * 100;
     
-    const heroActualSize = heroSection.clientHeight;
     
     progressBar.value = percentage;
     

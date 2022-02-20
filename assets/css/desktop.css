@@ -20,6 +20,10 @@
     min-height: 100vh;
 }
 
+section.tags-hero-section {
+    min-height: 35vh;
+}
+
 .social-share-icons__track {
     display: block;
 }

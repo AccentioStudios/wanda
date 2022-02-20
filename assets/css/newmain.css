@@ -18,19 +18,21 @@
 html {
   --social-share-a-hover-color: white;
   --social-share-a-color: var(--exc-accent-color);
-  --social-share-container-horizontal-bg-color: var(--mat-metal-light-color-alldp);
+  --social-share-container-horizontal-bg-color: var(
+    --mat-metal-light-color-alldp
+  );
   --read-more-background-color: var(--space-blue);
   --subscribe-section-background-color: var(--mat-metal-light-color-alldp);
 
   --footer-background-color: var(--mat-metal-dark-color-1dp);
 }
 html.dark-mode {
-    --social-share-a-hover-color: black;
-    --social-share-a-color: white;
-    --social-share-container-horizontal-bg-color: var(--mat-metal-dark-color-2dp);
-    --read-more-background-color: var(--mat-metal-dark-color-1dp);
-    --subscribe-section-background-color: var(--mat-metal-dark-color-1dp);
-    --footer-background-color: var(--mat-metal-dark-color-1dp);
+  --social-share-a-hover-color: black;
+  --social-share-a-color: white;
+  --social-share-container-horizontal-bg-color: var(--mat-metal-dark-color-2dp);
+  --read-more-background-color: var(--mat-metal-dark-color-1dp);
+  --subscribe-section-background-color: var(--mat-metal-dark-color-1dp);
+  --footer-background-color: var(--mat-metal-dark-color-1dp);
 }
 
 .hero-section {
@@ -555,39 +557,66 @@ ul.breadcrumb__content li a:hover {
 }
 
 .subscribe-section {
-    padding-top: 2vmin;
-    padding-bottom: 3vmin;
-    background: var(--subscribe-section-background-color);
+  padding-top: 2vmin;
+  padding-bottom: 3vmin;
+  background: var(--subscribe-section-background-color);
 }
 
 .subscribe-section__content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .subscribe-section__content > h2 {
-    line-height: var(--heading-s-line-height);
-    font-size: var(--heading-s-font-size);
-    letter-spacing: var(--heading-s-letter-spacing);
-    margin-bottom: 0.5em;
+  line-height: var(--heading-s-line-height);
+  font-size: var(--heading-s-font-size);
+  letter-spacing: var(--heading-s-letter-spacing);
+  margin-bottom: 0.5em;
 }
 
 .subscribe-section__content p {
-    max-width: 600px;
-    opacity: .7;
+  max-width: 600px;
+  opacity: 0.7;
 }
 
 .read-more-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    background: var(--read-more-background-color);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: var(--read-more-background-color);
+}
+
+.related-posts {
+  margin-bottom: 3rem;
 }
 
 .related-posts__content {
-    grid-column: main;
+  grid-column: main;
+}
+
+.footer-cta-button {
+  display: flex;
+  flex-direction: row;
+  background: rgb(255 255 255 / 45%);
+  border: 1px solid rgb(14 11 30 / 32%);
+  border-radius: 10px;
+  padding: 7px 14px;
+  padding-right: 10px;
+  color: gray;
+  justify-content: space-between;
+  margin-top: 1.3em;
+  font-size: 1.6rem;
+  column-gap: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+.footer-cta-span-btn {
+  background: var(--exc-button-color);
+  color: white;
+  border-radius: 6px;
+  padding: 0 12px;
 }
 
 @keyframes spinner-ripple {
@@ -685,7 +714,7 @@ ul.breadcrumb__content li a:hover {
 }
 
 .social-share-icons__container .social-share-icons__body li a {
-    color: var(--social-share-a-color);
+  color: var(--social-share-a-color);
   width: 48px;
   height: 48px;
   display: flex;
@@ -697,7 +726,7 @@ ul.breadcrumb__content li a:hover {
 }
 
 html.dark-mode .social-share-icons__container .social-share-icons__body li a {
-    opacity: 1;
+  opacity: 1;
 }
 
 .social-share-icons__container .social-share-icons__body li a:hover {
@@ -778,7 +807,6 @@ progress[value]::-moz-progress-bar {
   appearance: none;
 }
 
-
 .footer {
   color: var(--emphasis-high-dark-color);
   background-color: var(--footer-background-color);
@@ -796,7 +824,7 @@ progress[value]::-moz-progress-bar {
   grid-column: wide;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "logo links"
+  grid-template-areas: "logo links";
 }
 .footer__logo-and-social {
   display: inline-flex;

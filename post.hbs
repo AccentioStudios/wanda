@@ -99,17 +99,21 @@
                 {{@custom.email_signup_title}}
             </h2>
             {{/if}}
-            {{#if @custom.email_signup_title}}
+            {{#if @custom.email_signup_subtitle}}
             <p>
                 {{@custom.email_signup_subtitle}}
             </p>
             {{/if}}
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Escribe tu mejor email</div>
+                <span class="footer-cta-span-btn">Suscribirse</span>
+            </a>
         </main>
     </section>
 {{/if}}{{/unless}}
 {{/if}}
 {{#if @custom.show_recent_posts}}
-  <section class="read-more-section related-posts exc-canvas">
+  <section class="read-more-section exc-canvas">
     <div class="related-posts__content">
       <div class="exc-grid">
           {{#get "posts" filter="id:-{{id}}" include="authors,tags" limit="3" as |more_posts|}}

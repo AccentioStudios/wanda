@@ -12,15 +12,6 @@
                             {{ name }}
                         </h1>
                 </header>
-                <div class="post-card-excerpt {{#if feature_image}} emphasis-dark-top {{else}} emphasis-light-top {{/if}}">
-                    <p>
-                    {{#if description}}
-                        {{description}}
-                    {{else}}
-                        A collection of {{plural ../pagination.total empty='zero posts' singular='% post' plural='% posts'}}
-                    {{/if}}
-                    </p>
-                </div>
             </div>
                 {{#if feature_image}}
                 <div class="hero-section__background">
@@ -41,10 +32,8 @@
                 {{/if}}
             </section>
             {{/tag}}
-    <div class="exc-canvas">
+    <div class="related-posts exc-canvas">
         <div class="tags-post-list">
-
-
     <div class="related-posts__content">
       <div class="exc-grid">
             {{#if posts}}
@@ -57,4 +46,27 @@
 
         </div>
     </div>
+
+    {{#if @custom.show_subscribe_section}}
+        {{#unless @member}}
+        <section class="subscribe-section exc-canvas">
+            <main class="subscribe-section__content">
+                {{#if @custom.email_signup_title}}
+             <h2 class="hd-text-m">
+                 {{@custom.email_signup_title}}
+             </h2>
+             {{/if}}
+            {{#if @custom.email_signup_subtitle}}
+            <p>
+                {{@custom.email_signup_subtitle}}
+            </p>
+            {{/if}}
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Escribe tu mejor email</div>
+                <span class="footer-cta-span-btn">Suscribirse</span>
+            </a>
+          </main>
+        </section>
+    {{/unless}}
+{{/if}}
 </main>

@@ -2,6 +2,7 @@
 
 html {
   --exc-accent-color: var(--exc-accent-light-color);
+  --exc-button-color: var(--exc-accent-color);
   --background-color: var(--light-bg);
   --body-text-color: var(--text-light-color);
   --text-blockquote-color: var(--text-blockquote-light-color);
@@ -16,6 +17,7 @@ html {
 }
 html.dark-mode {
   --exc-accent-color: var(--exc-accent-dark-color);
+  --exc-button-color: var(--exc-accent-color);
   --background-color: var(--space-blue);
   --body-text-color: var(--text-dark-color);
   --text-blockquote-color: var(--text-blockquote-dark-color);

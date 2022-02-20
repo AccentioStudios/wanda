@@ -15,6 +15,9 @@
     letter-spacing: var(--heading-l-letter-spacing);
 }
 
+section.tags-hero-section {
+    min-height: 35vh;
+}
 
 .main-section__aside {
     display:block;
