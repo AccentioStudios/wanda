@@ -1,5 +1,6 @@
 {{!< default}}
 <main class="main">
+  {{> "carousel/home-carousel"}}
   {{! <section class="hero-section hero-section-with-bg hero-section-home-carr">
         <div class="spinner-ripple-container">
             <div class="spinner-ripple">
@@ -11,6 +12,9 @@
 
   <section class="related-posts exc-canvas">
     <div class="related-posts__content">
+      <p class="hd-text-m related-posts__discover-label">
+        Descubre
+      </p>
       <div class="exc-grid">
         {{#foreach posts}}
             {{> "post-card"}}

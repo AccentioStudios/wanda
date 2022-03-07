@@ -1,4 +1,4 @@
-  /* -- Color Scheme Maping -- */
+/* -- Color Scheme Maping -- */
 
 html {
   --exc-accent-color: var(--exc-accent-light-color);
@@ -10,10 +10,11 @@ html {
 
   --emphasis-top-color: var(--emphasis-top-light-color);
   --emphasis-high-color: var(--emphasis-high-light-color);
-  --emphasis-medium-color: var(--emphasis-medium-light-color);;
+  --emphasis-medium-color: var(--emphasis-medium-light-color);
   --emphasis-low-color: var(--emphasis-low-light-color);
   --emphasis-disabled-color: var(--emphasis-disabled-light-color);
 
+  --secondary-color: var(--secondary-color-700);
 }
 html.dark-mode {
   --exc-accent-color: var(--exc-accent-dark-color);
@@ -25,9 +26,11 @@ html.dark-mode {
 
   --emphasis-top-color: var(--emphasis-top-dark-color);
   --emphasis-high-color: var(--emphasis-high-dark-color);
-  --emphasis-medium-color: var(--emphasis-medium-dark-color);;
+  --emphasis-medium-color: var(--emphasis-medium-dark-color);
   --emphasis-low-color: var(--emphasis-low-dark-color);
   --emphasis-disabled-color: var(--emphasis-disabled-dark-color);
+
+  --secondary-color: var(--secondary-color-400);
 }
 
 /* ==========================================================================
@@ -125,7 +128,6 @@ blockquote {
   padding: 0 1.6em 0 1.6em;
   border-left: 3px solid var(--exc-accent-color);
 }
-
 
 blockquote p {
   margin: 0.8em 0;

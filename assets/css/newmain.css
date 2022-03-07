@@ -592,6 +592,13 @@ ul.breadcrumb__content li a:hover {
   margin-bottom: 3rem;
 }
 
+.related-posts__discover-label {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-family: var(--font-family-heading);
+}
+
 .related-posts__content {
   grid-column: main;
 }
